@@ -231,3 +231,4 @@ five-number-summary
 appPercentiles
 appDistributions
 outliers
+captioned-figures-and-tables
