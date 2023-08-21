@@ -2,9 +2,9 @@
 
 ## Using Google DataCommons to Predict Social Mobility  {-}
 
-- **Posted**: Thursday, November 17, 2022
+- **Posted**: Thursday, November 16, 2023
 
-- **Due**: Midnight on Friday, December 2, 2022
+- **Due**: Midnight on Friday, December 1, 2023
 
 You have already explored the [Opportunity Atlas](https://www.opportunityatlas.org/) in [Project 1](#project1) and the [Social Capital Atlas](https://socialcapital.org/). In this this empirical project, you will use the Opportunity Atlas mapping tool and the underlying data, plus data from [Google DataCommons](https://www.datacommons.org/), to predict intergenerational mobility using **machine learning** methods. The measure of intergenerational mobility that we will focus on, as usual, is the mean rank of a child whose parents were at the 25th percentile of the national income distribution in each county (`kfr_pooled_p25`). Your goal is to construct the best predictions of this outcome using other variables, an important step in creating forecasts of upward mobility that could be used for future generations, before data on their outcomes become available.
 
@@ -27,7 +27,7 @@ test<-readRDS(gzcon(url("https://raw.githubusercontent.com/jrm87/ECO3253_repo/ma
 
 ## Instructions {-}
 
-As usual, you will work on RStudio Cloud for this project. Write your responses within a [Quarto/RMarkdown here](#rmarkdown) file in the **project4** tab in RStudio Cloud.
+As usual, you will work on Posit Cloud for this project. Write your responses within a [Quarto/RMarkdown here](#rmarkdown) file in the **project4** tab in Posit Cloud.
 
 ### Specific questions  {-}
 

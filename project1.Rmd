@@ -4,11 +4,11 @@
 
 ## Stories from the Atlas: Describing Data using Maps, Regressions, and Correlations {-}
 
-- **Posted**: Friday, August 25, 2022
+- **Posted**: Monday, August 21, 2023
 
-- **Part 1**: Due at midnight on Wednesday, September 7, 2022
+- **Part 1**: Due at midnight on Wednesday, September 6, 2023
 
-- **Part 2**: Due at midnight on Wednesday, September 14, 2022
+- **Part 2**: Due at midnight on Friday, September 15, 2023
 
 The [Opportunity Atlas](https://www.opportunityatlas.org/) is a freely available interactive mapping tool that traces the roots of outcomes such as poverty and incarceration back to the neighborhoods in which children grew up.  
 
@@ -29,12 +29,12 @@ The R data file that you will use in this assignment, `atlas.rds`, contains an e
 You can load the data by using the usual line:
 
 ```{r eval=FALSE}
-atlas <- readRDS(gzcon(url("https://raw.githubusercontent.com/jrm87/ECO3253_repo/master/data/atlas.rds")))
+atlas <- readRDS(gzcon(url("https://raw.githubusercontent.com/jrm87/ECO3253_fall2023/master/data/atlas.rds")))
 ```
 
 ## Instructions {-}
 
-You will work on RStudio Cloud for this project. Write the narrative within a Quarto/RMarkdown file in the **project1** tab in RStudio Cloud.
+You will work on RStudio through Posit Cloud for this project. Write the narrative within a Quarto file in the **project1** tab in Posit Cloud.
 
 The deliverables for Part 1 and Part 2 are the following: 
 

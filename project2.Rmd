@@ -2,9 +2,9 @@
 
 ## Do Smaller Classes Improve Test Scores? Evidence from a Regression Discontinuity Design {-}
 
-- **Posted**: Friday, September 16, 2022
+- **Posted**: Friday, September 15, 2023
 
-- **Due**: At midnight on Friday, September 30, 2022
+- **Due**: At midnight on Friday, September 29, 2023
 
 In this empirical project, you will use a regression discontinuity design to estimate the causal effect of class size on test scores. To answer some of the questions, you will need to refer to the following papers:
 
@@ -26,7 +26,7 @@ knitr::include_graphics("images/project2/angristlevy99_2.png")
 
 ## Instructions {-}
 
-You will work on RStudio Cloud for this project. Write the replication within a Quarto/RMarkdown file in the **project2** tab in RStudio Cloud.
+You will work on Posit Cloud for this project. Write the replication within a Quarto/RMarkdown file in the **project2** tab in Posit Cloud.
 
 Recall that I created a Section to help you get up to speed with [Quarto/RMarkdown here](#rmarkdown). The Quarto/RMarkdown file is where you will write your report, run all your analysis, and the output of each code block should be visible. The output should include references, graphs, maps, and tables. 
 

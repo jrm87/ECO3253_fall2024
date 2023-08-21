@@ -213,7 +213,7 @@ s_review_final<-c("15: 11/30", #date
            "Review session ", #topic with link
            " ", #reading
            " ", # method
-           "[Project 4](#project4) - (for Friday 12/02)") #deliverable
+           "[Project 4](#project4) - (for Friday 12/01)") #deliverable
 ```
 
 ```{r tableSchedule, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}

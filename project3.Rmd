@@ -2,9 +2,9 @@
 
 ## Social Capital and Economic Mobility {-}
 
-- **Posted**: Wednesday, October 19, 2022
+- **Posted**: Wednesday, October 18, 2023
 
-- **Due**: Midnight on Wednesday, November 2, 2022
+- **Due**: Midnight on Wednesday, November 1, 2023
 
 You have already explored the [Opportunity Atlas](https://www.opportunityatlas.org/) in [Project 1](#project1). Now you will explore the new data on economic mobility that some of the previous researchers and new ones have made freely available in the [Social Capital Atlas](https://socialcapital.org/). It also provides an interactive mapping tool, as before, that attempts to trace the strength of our relationships and communities.  
 
@@ -24,7 +24,7 @@ atlas_socialk <- readRDS(gzcon(url("https://raw.githubusercontent.com/jrm87/ECO3
 
 ## Instructions {-}
 
-As usual, you will work on RStudio Cloud for this project. Write your responses within a [Quarto/RMarkdown here](#rmarkdown) file in the **project3** tab in RStudio Cloud.
+As usual, you will work on Posit Cloud for this project. Write your responses within a [Quarto/RMarkdown here](#rmarkdown) file in the **project3** tab in Posit Cloud.
 
 ### Specific questions to address in your narrative {-}
 

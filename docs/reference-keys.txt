@@ -149,10 +149,10 @@ ok-but-why-r
 added-benefits-of-learning-r
 key-concepts-before-we-start
 r-rstudio
-r-and-rstudio-in-your-computer-or-in-the-cloud
+r-and-rstudio-in-your-computer-or-in-the-cloud-the-benefit-of-posit-cloud
 lets-open-r
-rstudio-in-the-cloud
-using-r-via-rstudio
+rstudio-in-posit-cloud
+using-r-via-rstudio-in-posit-cloud
 code
 programming-concepts
 in-class-exercise
@@ -231,5 +231,5 @@ five-number-summary
 appPercentiles
 appDistributions
 outliers
-captioned-figures-and-tables
 url-your-book-url-like-httpsbookdown.orgyihuibookdown
+captioned-figures-and-tables
