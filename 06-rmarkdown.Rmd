@@ -32,7 +32,7 @@ There are several options when creating a Quarto file. You would go to the New f
 knitr::include_graphics("images/quarto_newfile.png")
 ```
 
-Then you select the title for the project you want to create, and add your name for the authorship. Leave all other default options unchanged, including the HTML option. Then click **Create**
+Then you select the title for the project you want to create, and add your name for the authorship. Select the **PDF** option (instead of the HTML), but leave all other default options unchanged. Then click **Create**
 
 ```{r , echo=FALSE, fig.align='center'}
 knitr::include_graphics("images/quarto_newdocument.png")
@@ -40,7 +40,18 @@ knitr::include_graphics("images/quarto_newdocument.png")
 
 You should have a new Quarto document now. Save it a name by clicking on the floppy disk.
 
-Now just try to render the file. This will create the final output in a readable fashion. To do that, click on **Render** (it as a blue arrow on the top). 
+Now just try to render the file. This will create the final PDF document that you need to deliver. To do that, click on **Render** (it as a blue arrow on the top). A new tab or window should open showing you the PDF document. It is possible you see a window like the one below, but in that case, just click on 'Try Again'. 
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/quarto_newfile_popup.png")
+```
+
+Alternatively, you should be able to see the **PDF** on the **Files** tab on the right of the screen with the same name as the document you saved, but with a '.pdf' extension.
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/quarto_newfile_files.png")
+```
+
 
 ### Error when rendering file
 
@@ -63,7 +74,13 @@ The rmarkdown package is not available in this R installation.
 Install with install.packages("rmarkdown")
 ```
 
-If that is the case, it's because the package `rmarkdown` is not installed. So go ahead and install it by running: 
+If that is the case, it's because the package `rmarkdown` is not installed. There are a couple of options here. First, if you see a yellow messaage on top of your document, saying that "Package rmarkdown required but not installed.", you can just click in "Install", wait for it to install, and render the document again. 
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/quarto_rmarkdown.png")
+```
+
+Alternatively, you can go to the console and install that package manually  by running: 
 
 ```{r, eval=FALSE}
 install.packages("rmarkdown")
@@ -71,19 +88,13 @@ install.packages("rmarkdown")
 
 Now click on **Render** once more. It should work, and you should see a new html window with your document. 
 
-Once you Render you should see a new pop up window with the output html site, in which this example, would be something like this: 
+Once you Render you should see a new pop up window with the final pdf document, in which this example, would be something like this: 
 
 ```{r , echo=FALSE, fig.align='center'}
 knitr::include_graphics("images/quarto_output.png")
 ```
 
-You will also this in the tab **Background Jobs**:
-
-```{r , echo=FALSE, fig.align='center'}
-knitr::include_graphics("images/quarto_finaldoc.png")
-```
-
-Notice the text after *Browse at:*. That is an address that you can use to watch the final output if you cannot see it anymore. 
+Once more, remember you will be able to see the final pdf document on the bottom right pane called 'Files' with the same name as the main Quarto Document. 
 
 ## Add new code
 
@@ -129,4 +140,4 @@ knitr::include_graphics("images/quarto_imageupload4.png")
 
 ## Submit your work
 
-There is no need to submit anything for [Project 1](#project1). I will check the RStudio site on Thursday morning, and check your progress on project 1. 
+You will submit your pdf files for [Project 1](#project1) and the other projects through Canvas.
