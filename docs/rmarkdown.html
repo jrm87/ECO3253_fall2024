@@ -23,7 +23,7 @@
 <meta name="author" content="Jonathan Moreno-Medina" />
 
 
-<meta name="date" content="2023-08-21" />
+<meta name="date" content="2023-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -501,10 +501,13 @@ div.csl-indent {
 <h2><span class="header-section-number">15.1</span> How to create an output file<a href="rmarkdown.html#how-to-create-an-output-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are several options when creating a Quarto file. You would go to the New file symbol (white page with green plus), and select the <strong>Quarto Document</strong> option</p>
 <p><img src="images/quarto_newfile.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<p>Then you select the title for the project you want to create, and add your name for the authorship. Leave all other default options unchanged, including the HTML option. Then click <strong>Create</strong></p>
+<p>Then you select the title for the project you want to create, and add your name for the authorship. Select the <strong>PDF</strong> option (instead of the HTML), but leave all other default options unchanged. Then click <strong>Create</strong></p>
 <p><img src="images/quarto_newdocument.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>You should have a new Quarto document now. Save it a name by clicking on the floppy disk.</p>
-<p>Now just try to render the file. This will create the final output in a readable fashion. To do that, click on <strong>Render</strong> (it as a blue arrow on the top).</p>
+<p>Now just try to render the file. This will create the final PDF document that you need to deliver. To do that, click on <strong>Render</strong> (it as a blue arrow on the top). A new tab or window should open showing you the PDF document. It is possible you see a window like the one below, but in that case, just click on ‘Try Again’.</p>
+<p><img src="images/quarto_newfile_popup.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p>Alternatively, you should be able to see the <strong>PDF</strong> on the <strong>Files</strong> tab on the right of the screen with the same name as the document you saved, but with a ‘.pdf’ extension.</p>
+<p><img src="images/quarto_newfile_files.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div id="error-when-rendering-file" class="section level3 hasAnchor" number="15.1.1">
 <h3><span class="header-section-number">15.1.1</span> Error when rendering file<a href="rmarkdown.html#error-when-rendering-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Maybe you clicked on <strong>Render</strong> and got this message in the **Background Jobs” tab, by the console:</p>
@@ -522,14 +525,14 @@ R installation:
 
 The rmarkdown package is not available in this R installation.
 Install with install.packages(&quot;rmarkdown&quot;)</code></pre>
-<p>If that is the case, it’s because the package <code>rmarkdown</code> is not installed. So go ahead and install it by running:</p>
+<p>If that is the case, it’s because the package <code>rmarkdown</code> is not installed. There are a couple of options here. First, if you see a yellow messaage on top of your document, saying that “Package rmarkdown required but not installed.”, you can just click in “Install”, wait for it to install, and render the document again.</p>
+<p><img src="images/quarto_rmarkdown.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p>Alternatively, you can go to the console and install that package manually by running:</p>
 <div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="rmarkdown.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
 <p>Now click on <strong>Render</strong> once more. It should work, and you should see a new html window with your document.</p>
-<p>Once you Render you should see a new pop up window with the output html site, in which this example, would be something like this:</p>
+<p>Once you Render you should see a new pop up window with the final pdf document, in which this example, would be something like this:</p>
 <p><img src="images/quarto_output.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<p>You will also this in the tab <strong>Background Jobs</strong>:</p>
-<p><img src="images/quarto_finaldoc.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<p>Notice the text after <em>Browse at:</em>. That is an address that you can use to watch the final output if you cannot see it anymore.</p>
+<p>Once more, remember you will be able to see the final pdf document on the bottom right pane called ‘Files’ with the same name as the main Quarto Document.</p>
 </div>
 </div>
 <div id="add-new-code" class="section level2 hasAnchor" number="15.2">
@@ -555,7 +558,7 @@ Install with install.packages(&quot;rmarkdown&quot;)</code></pre>
 </div>
 <div id="submit-your-work" class="section level2 hasAnchor" number="15.5">
 <h2><span class="header-section-number">15.5</span> Submit your work<a href="rmarkdown.html#submit-your-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There is no need to submit anything for <a href="project1.html#project1">Project 1</a>. I will check the RStudio site on Thursday morning, and check your progress on project 1.</p>
+<p>You will submit your pdf files for <a href="project1.html#project1">Project 1</a> and the other projects through Canvas.</p>
 
 </div>
 </div>
