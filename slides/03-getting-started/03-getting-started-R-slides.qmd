@@ -9,7 +9,7 @@ format:
       urlcolor: blue
 author: Jonathan Moreno-Medina
 institute: ECO3253, UTSA
-date: "Fall 2022"
+date: today
 ---
 
 # Why R again?
@@ -143,14 +143,7 @@ To use R and RStudio, you can:
 
 ## RStudio in the cloud
 
-Let's jump in! You should have received a link for you to access RStudio in the cloud. The Department of Economics is paying for us to use this service for this class. Remember that all the **code is running on someone's computer**. In this case, it is running on a computer owned by the folks at RStudio. 
-
-INCLUDE FIGURE OF RStudio Cloud
-
-## Starting a project
-
-Include Figure
-
+Let's jump in! You should have received a link for you to access Posit Cloud. Remember that all the **code is running on someone's computer**. In this case, it is running on a computer owned by the folks at RStudio/Posit. 
 
 ## Using R via RStudio
 
@@ -261,14 +254,12 @@ R reports errors, warnings, and messages in a glaring red font, which makes it s
 R will show red text in the console pane in three different situations:
 
 
-
 ## Errors
 
 * **Errors**: When \textcolor{red}{red text} is a legitimate error, it will be prefaced with "Error in…" and try to explain what went wrong. 
 
 * Generally when there's an error, the code will not run. 
     * For example, we'll see in Subsection \@ref(package-use) if you see `Error in ggplot(...) : could not find function "ggplot"`: it means that the `ggplot()` function is not accessible because the package that contains the function (`ggplot2`) was not loaded with `library(ggplot2)`. Thus you cannot use the `ggplot()` function without the `ggplot2` package being loaded first.
-
 
 
 ## Warnings
@@ -409,6 +400,140 @@ Error: could not find function
 ```
 
 R is telling you that you are trying to use a function in a package that has not yet been "loaded." Almost all new users forget do this when starting out, and it is a little annoying to get used to. However, you'll remember with pratice.  
+
+# Output files for Projects
+
+## Output file for Projects: Quarto Document (in PDF) 
+
+How to deliver your work in this class: Quarto Documents. 
+
+- New file symbol (white page with green plus) $\rightarrow$ **Quarto Document**:
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_newfile.png")
+```
+
+## Output file for Projects: Quarto Document (in PDF) - 2
+
+- Select title + name $\rightarrow$ Select **PDF** option (instead of the HTML) $\rightarrow$ click **Create**
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_newdocument.png")
+```
+
+## Output file for Projects: Quarto Document (in PDF) - 3
+
+You should have a new Quarto document now. Save it a name by clicking on the floppy disk.
+
+- Render the file (Click Render - it has a blue arrow on the top). 
+    - A new tab or window should open showing you the PDF document. It is possible you see a window like the one below, but in that case, just click on 'Try Again'. 
+
+```{r , echo=FALSE, fig.align='center', out.height="20%"}
+knitr::include_graphics("../../images/quarto_newfile_popup.png")
+```
+
+## Output file for Projects: Quarto Document (in PDF) - 4
+
+Alternatively, you should be able to see the **PDF** on the **Files** tab on the right of the screen with the same name as the document you saved, but with a '.pdf' extension.
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_newfile_files.png")
+```
+
+## Error when rendering file
+
+Maybe you clicked on **Render** and got this message in the **Background Jobs" tab, by the console: 
+
+```
+Error in loadNamespace(x) : there is no package called ‘jsonlite’
+Calls: .main ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+
+R installation:
+  Version: 4.2.1
+  Path: /opt/R/4.2.1/lib/R
+  LibPaths:
+    - /cloud/lib/x86_64-pc-linux-gnu-library/4.2
+    - /opt/R/4.2.1/lib/R/library
+  rmarkdown: (None)
+
+The rmarkdown package is not available in this R installation.
+Install with install.packages("rmarkdown")
+```
+
+## Error when rendering file - 2
+
+If so, the package `rmarkdown` is not installed. 
+
+- Option 1: If you see a yellow message on top of your document, saying that "Package rmarkdown required but not installed.", you can just click in "Install", wait for it to install, and render the document again. 
+
+- Option 2: Go to the console and install that package manually  by running: 
+
+```{r, eval=FALSE}
+install.packages("rmarkdown")
+```
+
+Now click on **Render** once more. It should work, and you should see a new html window with your document. 
+
+## Add new code
+
+You add code by adding 'chunks' of code. You do that by clicking on **Insert**, then **Code Chunk**, and then **R**.
+
+Also, notice that if you add to the first line of the chunk a line like this `#| echo:false`, then when you render you will not see the code, but only the output of the code. This is convenient when the output is too long or distracting, or when you don't want to show the code necessarily. 
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_codechunk.png")
+```
+
+## Add a title
+
+If you want to add a new title, just type in the main text the following `## ` (notice the space), and that will give you a Header (or title). You can get subtitles by typing three instead of two pound symbols: `### `. 
+
+## Add an image
+
+What if you want to add an image? For example, you might have downloaded an image like this from the Opportunity Atlas website:
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/fips_tract.png")
+```
+
+## Add an image - 2
+
+How do you add it? Well, you need to do it in two steps. The first, is to **upload** the image to the directory. To do that, go to the **Files** tab, and click on **Upload**, and select your image:
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_imageupload.png")
+```
+
+## Add an image - 3
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_imageupload2.png")
+```
+
+## Add an image - 4
+
+- You should now see your image in the **Files** tab. 
+- Add the image to the document by clicking on the image symbol on the top (close to the **Insert** option). 
+- Browse and select the uploaded image + add a caption + add it. You should then see it in the main document. 
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_imageupload3.png")
+```
+
+## Add an image - 5
+
+```{r , echo=FALSE, fig.align='center'}
+knitr::include_graphics("../../images/quarto_imageupload4.png")
+```
+
+## Adding math
+
+Turns out you can also write mathematical notation in Quarto Documents. We will not get into this for this class, but if you know or are interested in learning $LATEX$ notation, you can check [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+
+This is an example: 
+
+$$\displaystyle\sum_{i=1}^{10} t_i$$
 
 # Hands-on exercise!
 

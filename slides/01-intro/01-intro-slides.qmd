@@ -9,7 +9,7 @@ format:
       urlcolor: blue
 author: Jonathan Moreno-Medina
 institute: ECO3253, UTSA
-date: "Fall 2022"
+date: today
 ---
 
 # What is this course about?
@@ -175,7 +175,7 @@ theme_pander(base_size = 17) +
 theme(legend.position = "bottom")
 ```
 
-## R and RStudio
+## R, RStudio and Posit Cloud
 
 - We will talk more about R and RStudio next Monday. 
 - I will reach out with very simple instructions sometime this week. 
@@ -198,12 +198,13 @@ Back to the content! We will cover and use several economic concepts you probabl
 tabl <- "
 | Activity              | Perc. Weight |
 | --------------------- | ------------ |
+| Project 0             | 5%          |
 | Projects              | 40%          |
 | Midterm               | 25%          |
 | Final                 | 25%          |
 | Lecture Attendance    | 5%          |
 | Class and lab participation | 5%          |
-| **Total**             | 100%          |
+| **Total**             | 105%          |
 "
 cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
 ```
