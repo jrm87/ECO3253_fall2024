@@ -9,7 +9,7 @@ format:
       urlcolor: blue
 author: Jonathan Moreno-Medina
 institute: ECO3253, UTSA
-date: "Fall 2022"
+date: today
 ---
 
 ## Plan for today
@@ -50,6 +50,7 @@ Reminder: Friday is deadline for submission of Project Part 1 **and** Part 2
 
 1. MTO Experiment
 1. Place based policies
+1. 15 minutes for regression analysis in R: see [https://jrm87.github.io/ECO3253_fall2023/regression.html](https://jrm87.github.io/ECO3253_fall2023/regression.html)
 
 ## Two Approaches to Increasing Upward Mobility
 

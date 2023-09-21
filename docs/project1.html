@@ -23,7 +23,7 @@
 <meta name="author" content="Jonathan Moreno-Medina" />
 
 
-<meta name="date" content="2023-08-28" />
+<meta name="date" content="2023-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="appendixA.html"/>
-
+<link rel="next" href="project2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -121,28 +121,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -471,6 +449,24 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="project1.html"><a href="project1.html#plotting-the-linear-relationship"><i class="fa fa-check"></i>Plotting the linear relationship</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html"><i class="fa fa-check"></i>Project 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#do-smaller-classes-improve-test-scores-evidence-from-a-regression-discontinuity-design"><i class="fa fa-check"></i>Do Smaller Classes Improve Test Scores? Evidence from a Regression Discontinuity Design</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#instructions-1"><i class="fa fa-check"></i>Instructions</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#questions-to-address-in-your-replication"><i class="fa fa-check"></i>Questions to address in your replication</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#descriptionproject2"><i class="fa fa-check"></i>Data Description</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#cheatsheetproject2"><i class="fa fa-check"></i>Cheatsheat commands</a>
+<ul>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#r-command-description"><i class="fa fa-check"></i>R command Description</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#packages-needed"><i class="fa fa-check"></i>Packages needed</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#subset-observations-1"><i class="fa fa-check"></i>Subset observations</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#draw-binned-scatterplots"><i class="fa fa-check"></i>Draw binned scatterplots</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#collapse-or-summarize-datasets"><i class="fa fa-check"></i>Collapse or summarize datasets</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#draw-graph-of-count-of-schools"><i class="fa fa-check"></i>Draw graph of count of schools</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#estimate-the-discontinuity"><i class="fa fa-check"></i>Estimate the discontinuity</a></li>
+<li class="chapter" data-level="" data-path="project2.html"><a href="project2.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://www.jmorenomedina.com/" target="blank">By Jon Moreno-Medina</a></li>
 
@@ -511,7 +507,7 @@ div.csl-indent {
 </ol>
 <p>The R data file that you will use in this assignment, <code>atlas.rds</code>, contains an extract of the Opportunity Atlas data. It is also merged on several other variables, which you may use for the correlational analysis.</p>
 <p>You can load the data by using the usual line:</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="project1.html#cb88-1" aria-hidden="true" tabindex="-1"></a>atlas <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">gzcon</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/jrm87/ECO3253_fall2023/master/data/atlas.rds&quot;</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="project1.html#cb88-1" tabindex="-1"></a>atlas <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">gzcon</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/jrm87/ECO3253_fall2023/master/data/atlas.rds&quot;</span>)))</span></code></pre></div>
 </div>
 <div id="instructions" class="section level2 unnumbered hasAnchor">
 <h2>Instructions<a href="project1.html#instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -537,13 +533,13 @@ Figure 1 in your narrative should be a map of the Census tracts in your hometown
 <li><p>Now turn to the <code>atlas.rds</code> data set. How does average upward mobility, pooling races and genders, for children with parents at the 25th percentile (<code>kfr pooled_p25</code>) in your home Census tract compare to mean (population-weighted, using <code>count_pooled</code>) upward mobility in your state and in the U.S. overall? Do kids where you grew up have better or worse chances of climbing the income ladder than the average child in America?</p></li>
 </ol>
 <p><strong>Hint</strong>: The Opportunity Atlas website will give you the tract, county, and state FIPS codes for your home address. For example, searching for “Lynwood Road, Verona, New Jersey” will display Tract 34013021000, Verona, NJ. The first two digits refer to the state code, the next three digits refer to the county code, and the last 6 digits refer to the tract code. In R, you can list these observations with the function <code>filter()</code> as follows (assuming you called the data as atlas as in Table 2). If you only want to see <code>kfr_pooled_p25</code>:</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="project1.html#cb89-1" aria-hidden="true" tabindex="-1"></a>atlas_lynwood<span class="ot">&lt;-</span>atlas<span class="sc">%&gt;%</span></span>
-<span id="cb89-2"><a href="project1.html#cb89-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="dv">34</span> <span class="sc">&amp;</span> county <span class="sc">==</span> <span class="dv">013</span> <span class="sc">&amp;</span> tract <span class="sc">==</span> <span class="dv">021000</span>)</span>
-<span id="cb89-3"><a href="project1.html#cb89-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb89-4"><a href="project1.html#cb89-4" aria-hidden="true" tabindex="-1"></a>atlas_lynwood<span class="sc">%&gt;%</span></span>
-<span id="cb89-5"><a href="project1.html#cb89-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(kfr_pooled_p25)</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="project1.html#cb89-1" tabindex="-1"></a>atlas_lynwood<span class="ot">&lt;-</span>atlas<span class="sc">%&gt;%</span></span>
+<span id="cb89-2"><a href="project1.html#cb89-2" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="dv">34</span> <span class="sc">&amp;</span> county <span class="sc">==</span> <span class="dv">013</span> <span class="sc">&amp;</span> tract <span class="sc">==</span> <span class="dv">021000</span>)</span>
+<span id="cb89-3"><a href="project1.html#cb89-3" tabindex="-1"></a></span>
+<span id="cb89-4"><a href="project1.html#cb89-4" tabindex="-1"></a>atlas_lynwood<span class="sc">%&gt;%</span></span>
+<span id="cb89-5"><a href="project1.html#cb89-5" tabindex="-1"></a>  <span class="fu">select</span>(kfr_pooled_p25)</span></code></pre></div>
 <p>Or to see all the variables for that tract:</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="project1.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(atlas_lynwood)</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="project1.html#cb90-1" tabindex="-1"></a><span class="fu">View</span>(atlas_lynwood)</span></code></pre></div>
 <p>See the <a href="project1.html#cheatsheetproject1">Cheat-sheet Section</a> below for further help.</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>What is the standard deviation of upward mobility (population-weighted) in your home county? Is it larger or smaller than the standard deviation across tracts in your state? Across tracts in the country? What do you learn from these comparisons?</p></li>
@@ -967,15 +963,15 @@ Figure A.2: Incarceration Rates for Black Men Raised in the Lowest-Income Househ
 </div>
 <div id="unweighted-summary-statistics" class="section level3 unnumbered hasAnchor">
 <h3>Unweighted summary statistics<a href="project1.html#unweighted-summary-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="project1.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(atlas<span class="sc">$</span>yvar)</span>
-<span id="cb91-2"><a href="project1.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(atlas<span class="sc">$</span>yvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb91-3"><a href="project1.html#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(atlas<span class="sc">$</span>yvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="project1.html#cb91-1" tabindex="-1"></a><span class="fu">summary</span>(atlas<span class="sc">$</span>yvar)</span>
+<span id="cb91-2"><a href="project1.html#cb91-2" tabindex="-1"></a><span class="fu">mean</span>(atlas<span class="sc">$</span>yvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb91-3"><a href="project1.html#cb91-3" tabindex="-1"></a><span class="fu">sd</span>(atlas<span class="sc">$</span>yvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 <div id="load-package" class="section level3 unnumbered hasAnchor">
 <h3>Load package<a href="project1.html#load-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you wanted to install and open the package <code>Hmisc</code> (which you will need to calculate the weighted statistics), run:</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="project1.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;Hmisc&quot;</span>)</span>
-<span id="cb92-2"><a href="project1.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Hmisc)</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="project1.html#cb92-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;Hmisc&quot;</span>)</span>
+<span id="cb92-2"><a href="project1.html#cb92-2" tabindex="-1"></a><span class="fu">library</span>(Hmisc)</span></code></pre></div>
 </div>
 <div id="weighted-summary-statistics" class="section level3 unnumbered hasAnchor">
 <h3>Weighted summary statistics<a href="project1.html#weighted-summary-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -983,11 +979,11 @@ Figure A.2: Incarceration Rates for Black Men Raised in the Lowest-Income Househ
 <ol style="list-style-type: decimal">
 <li>Weighted mean:</li>
 </ol>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="project1.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wtd.mean</span>(atlas<span class="sc">$</span>yvar, atlas<span class="sc">$</span>count_pooled)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="project1.html#cb93-1" tabindex="-1"></a><span class="fu">wtd.mean</span>(atlas<span class="sc">$</span>yvar, atlas<span class="sc">$</span>count_pooled)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Weighted standard deviation:</li>
 </ol>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="project1.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">wtd.var</span>(atlas<span class="sc">$</span>yvar, atlas<span class="sc">$</span>count_pooled))</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="project1.html#cb94-1" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">wtd.var</span>(atlas<span class="sc">$</span>yvar, atlas<span class="sc">$</span>count_pooled))</span></code></pre></div>
 </div>
 <div id="subset-observations" class="section level3 unnumbered hasAnchor">
 <h3>Subset observations<a href="project1.html#subset-observations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -995,24 +991,24 @@ Figure A.2: Incarceration Rates for Black Men Raised in the Lowest-Income Househ
 <li>State level:</li>
 </ol>
 <p>If you want to select a subset of observations, you can add the rule for selecting those observations, and the <code>filter</code> function. Here we subset the observations for the State of Wisconsin, and called the resulting dataset <code>atlas_wisconsin</code>.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="project1.html#cb95-1" aria-hidden="true" tabindex="-1"></a>atlas_wisconsin <span class="ot">&lt;-</span> atlas <span class="sc">%&gt;%</span> </span>
-<span id="cb95-2"><a href="project1.html#cb95-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="dv">55</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="project1.html#cb95-1" tabindex="-1"></a>atlas_wisconsin <span class="ot">&lt;-</span> atlas <span class="sc">%&gt;%</span> </span>
+<span id="cb95-2"><a href="project1.html#cb95-2" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="dv">55</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>County level:</li>
 </ol>
 <p>We can do the same but now for a specific county, adding an extra rule after a comma <code>,</code> or <code>&amp;</code>. Here we subset the observations for Milwaukee County in Wisconsin:</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="project1.html#cb96-1" aria-hidden="true" tabindex="-1"></a>atlas_milwaukee <span class="ot">&lt;-</span> atlas <span class="sc">%&gt;%</span> </span>
-<span id="cb96-2"><a href="project1.html#cb96-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="dv">55</span> <span class="sc">&amp;</span> county <span class="sc">==</span> <span class="dv">079</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="project1.html#cb96-1" tabindex="-1"></a>atlas_milwaukee <span class="ot">&lt;-</span> atlas <span class="sc">%&gt;%</span> </span>
+<span id="cb96-2"><a href="project1.html#cb96-2" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="dv">55</span> <span class="sc">&amp;</span> county <span class="sc">==</span> <span class="dv">079</span>) </span></code></pre></div>
 </div>
 <div id="standardize-variables" class="section level3 unnumbered hasAnchor">
 <h3>Standardize variables<a href="project1.html#standardize-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can standardize variables by substracting the mean and dividing by the standard deviation. Let us say that you want to standardize only considering the variables in Milwaukee, then you can do this:</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="project1.html#cb97-1" aria-hidden="true" tabindex="-1"></a>atlas_milwaukee<span class="ot">&lt;-</span> atlas_milwaukee <span class="sc">%&gt;%</span></span>
-<span id="cb97-2"><a href="project1.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x_std=</span>(xvar <span class="sc">-</span> <span class="fu">mean</span>(atlas_milwaukee<span class="sc">$</span>xvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>))<span class="sc">/</span><span class="fu">sd</span>(atlas_milwaukee<span class="sc">$</span>xvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="project1.html#cb97-1" tabindex="-1"></a>atlas_milwaukee<span class="ot">&lt;-</span> atlas_milwaukee <span class="sc">%&gt;%</span></span>
+<span id="cb97-2"><a href="project1.html#cb97-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x_std=</span>(xvar <span class="sc">-</span> <span class="fu">mean</span>(atlas_milwaukee<span class="sc">$</span>xvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>))<span class="sc">/</span><span class="fu">sd</span>(atlas_milwaukee<span class="sc">$</span>xvar, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
 <p>As an example, let’s say you want to standardize both the measure of mobility and the annual job growth for the data in Wisconsin:</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="project1.html#cb98-1" aria-hidden="true" tabindex="-1"></a>atlas_wisconsin<span class="ot">&lt;-</span> atlas_wisconsin <span class="sc">%&gt;%</span></span>
-<span id="cb98-2"><a href="project1.html#cb98-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">kfr_pooled_p25_std=</span>(kfr_pooled_p25 <span class="sc">-</span> <span class="fu">mean</span>(atlas_wisconsin<span class="sc">$</span>kfr_pooled_p25, <span class="at">na.rm=</span><span class="cn">TRUE</span>))<span class="sc">/</span><span class="fu">sd</span>(atlas_wisconsin<span class="sc">$</span>kfr_pooled_p25, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb98-3"><a href="project1.html#cb98-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ann_avg_job_growth_2004_2013_std=</span>(ann_avg_job_growth_2004_2013 <span class="sc">-</span> <span class="fu">mean</span>(atlas_wisconsin<span class="sc">$</span>ann_avg_job_growth_2004_2013, <span class="at">na.rm=</span><span class="cn">TRUE</span>))<span class="sc">/</span><span class="fu">sd</span>(atlas_wisconsin<span class="sc">$</span>ann_avg_job_growth_2004_2013, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="project1.html#cb98-1" tabindex="-1"></a>atlas_wisconsin<span class="ot">&lt;-</span> atlas_wisconsin <span class="sc">%&gt;%</span></span>
+<span id="cb98-2"><a href="project1.html#cb98-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">kfr_pooled_p25_std=</span>(kfr_pooled_p25 <span class="sc">-</span> <span class="fu">mean</span>(atlas_wisconsin<span class="sc">$</span>kfr_pooled_p25, <span class="at">na.rm=</span><span class="cn">TRUE</span>))<span class="sc">/</span><span class="fu">sd</span>(atlas_wisconsin<span class="sc">$</span>kfr_pooled_p25, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb98-3"><a href="project1.html#cb98-3" tabindex="-1"></a>         <span class="at">ann_avg_job_growth_2004_2013_std=</span>(ann_avg_job_growth_2004_2013 <span class="sc">-</span> <span class="fu">mean</span>(atlas_wisconsin<span class="sc">$</span>ann_avg_job_growth_2004_2013, <span class="at">na.rm=</span><span class="cn">TRUE</span>))<span class="sc">/</span><span class="fu">sd</span>(atlas_wisconsin<span class="sc">$</span>ann_avg_job_growth_2004_2013, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
 </div>
 <div id="run-regression" class="section level3 unnumbered hasAnchor">
 <h3>Run regression<a href="project1.html#run-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1021,22 +1017,22 @@ Figure A.2: Incarceration Rates for Black Men Raised in the Lowest-Income Househ
 <li>Simple linear regression</li>
 </ol>
 <p>Let’s say you want to run a simple regression of variable <code>yvar</code> on variable <code>xvar1</code> for the county of Milwaukee. We will save the results of that regression in an object call <code>mod1</code> (we could give it any name). Then you would do this:</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="project1.html#cb99-1" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yvar<span class="sc">~</span>xvar1, <span class="at">data =</span> atlas_milwaukee)</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="project1.html#cb99-1" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yvar<span class="sc">~</span>xvar1, <span class="at">data =</span> atlas_milwaukee)</span></code></pre></div>
 <p>To see what the outcome of the regression is, you would use the function <code>summary</code> and apply it to our new object <code>mod1</code>, like this:</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="project1.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="project1.html#cb100-1" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span></code></pre></div>
 <p>As an example, we could regress the mobility of children from parents in the 25th percentile (<code>kfr_pooled_p25</code>) on the average annual job growth rate between 2004 and 2013 (<code>ann_avg_job_growth_2004_2013</code>). To do that, we would run:</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="project1.html#cb101-1" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(kfr_pooled_p25<span class="sc">~</span>ann_avg_job_growth_2004_2013, <span class="at">data =</span> atlas_milwaukee)</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="project1.html#cb101-1" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(kfr_pooled_p25<span class="sc">~</span>ann_avg_job_growth_2004_2013, <span class="at">data =</span> atlas_milwaukee)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Multivariate linear regression</li>
 </ol>
 <p>You might want to understand the relationship between <code>yvar</code> and variable <code>xvar1</code> <strong>while holding fixed</strong> another variable <code>xvar2</code> for neighborhoods only in Milwaukee. You can do this:</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="project1.html#cb102-1" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yvar<span class="sc">~</span>xvar1<span class="sc">+</span>xvar2 <span class="sc">+</span> xvar3, <span class="at">data =</span> atlas_milwaukee)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="project1.html#cb102-1" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yvar<span class="sc">~</span>xvar1<span class="sc">+</span>xvar2 <span class="sc">+</span> xvar3, <span class="at">data =</span> atlas_milwaukee)</span></code></pre></div>
 </div>
 <div id="how-to-read-the-regression-output" class="section level3 unnumbered hasAnchor">
 <h3>How to read the regression output?<a href="project1.html#how-to-read-the-regression-output" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To simplify the interpretation, let’s run a regression where you use the standardize both the measure of mobility and the annual job growth for the data in Wisconsin:</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="project1.html#cb103-1" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(kfr_pooled_p25_std <span class="sc">~</span> ann_avg_job_growth_2004_2013_std, <span class="at">data =</span> atlas_wisconsin)</span>
-<span id="cb103-2"><a href="project1.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="project1.html#cb103-1" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(kfr_pooled_p25_std <span class="sc">~</span> ann_avg_job_growth_2004_2013_std, <span class="at">data =</span> atlas_wisconsin)</span>
+<span id="cb103-2"><a href="project1.html#cb103-2" tabindex="-1"></a><span class="fu">summary</span>(mod3)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = kfr_pooled_p25_std ~ ann_avg_job_growth_2004_2013_std, 
@@ -1065,34 +1061,23 @@ Figure A.2: Incarceration Rates for Black Men Raised in the Lowest-Income Househ
 <div id="plotting-the-linear-relationship" class="section level3 unnumbered hasAnchor">
 <h3>Plotting the linear relationship<a href="project1.html#plotting-the-linear-relationship" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You need to load the <code>ggplot2</code> package (which should be installed already).</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="project1.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="project1.html#cb105-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 <p>Suppose you want to visually see the linear relationship between two variables in the <code>atlas_milwaukee</code> dataset that we filtered above. Then, you can do this:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="project1.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atlas_milwaukee) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> xvar1, <span class="at">y =</span> yvar)) <span class="sc">+</span> </span>
-<span id="cb106-2"><a href="project1.html#cb106-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x =</span> xvar1, <span class="at">y =</span> yvar), <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> F)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="project1.html#cb106-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atlas_milwaukee) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> xvar1, <span class="at">y =</span> yvar)) <span class="sc">+</span> </span>
+<span id="cb106-2"><a href="project1.html#cb106-2" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x =</span> xvar1, <span class="at">y =</span> yvar), <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> F)</span></code></pre></div>
 <p>The function <code>geom_smooth()</code> adds the line that you calculated above for <code>mod1</code>, where you ran <code>mod1 &lt;- lm(yvar~xvar1, data = atlas_milwaukee)</code>.</p>
 <p>For more, see Section <a href="viz.html#viz">12</a>.</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2022. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="appendixA.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="appendixA.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="project2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

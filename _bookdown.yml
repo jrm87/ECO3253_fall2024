@@ -22,9 +22,8 @@ rmd_files: [
   "05-regression.Rmd",
   "06-rmarkdown.Rmd",
   "91-appendixA.Rmd",
-  "project1.Rmd"
-  #,
-  #"project2.Rmd",
+  "project1.Rmd",
+  "project2.Rmd"
   #"project3.Rmd",
   #"project4.Rmd"
 ]

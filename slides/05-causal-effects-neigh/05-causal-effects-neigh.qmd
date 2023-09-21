@@ -9,22 +9,12 @@ format:
       urlcolor: blue
 author: Jonathan Moreno-Medina
 institute: ECO3253, UTSA
-date: "Fall 2022"
+date: today
 ---
-
-## Plan for today
-
-Reminder: Today is deadline for submission
-
-1. Clarifications about project
-1. Causal effects of neighborhoods
-1. Regression Analysis (work in couples for 15 mins)
 
 ## Clarifications for project
 
-1. No need to submit anything. I will use time stamps for your work. Remember you should use the **project1** tab
-
-2. When you create the Quarto/RMarkdown file, **do not change anything besides title and author** between the `---` lines (this is called YAML code).
+1. When you create the Quarto/RMarkdown file, **do not change anything besides title and author** between the `---` lines (this is called YAML code).
 
 ```
 ---
@@ -329,4 +319,4 @@ $$G_i = Y_i(V=1) – Y_i(V=0)$$
 
 - More generally, divide estimated effect by rate of compliance:
 
-    - True Impact = Estimated Impact/Compliance Rate
+    - True Impact = Estimated Impact/Compliance Rate (in this case 1,000/0.5)

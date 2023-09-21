@@ -10,7 +10,7 @@ format:
       slide-level: 2
 author: Jonathan Moreno-Medina
 institute: ECO3253, UTSA
-date: "Fall 2022"
+date: today
 ---
 
 ## Plan for today

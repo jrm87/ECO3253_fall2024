@@ -33,7 +33,7 @@ s_introR2<-c("2: 08/30", #date
            "Intro to [Visualization](#viz), [Wrangling](#wrangling) and [RMarkdown](#rmarkdown)", #topic with link
            " ", #reading
            " ", # method
-           "First short report (In class)") #deliverable
+           "First short report (In class) - Project 0") #deliverable
 s_laborday<-c("3: 09/04", #date
            "-", # session
            "Labor Day – No class", #topic with link
@@ -45,7 +45,7 @@ s_causaleffects<-c("3: 09/06", #date
            "[Intro to Causal Effects of Neighborhoods](#lec2_causaleffect) ", #topic with link
            "Bergman, Chetty, DeLuca, Hendren, Katz and Palmer (2019) **[Non-technical summary]**", #reading
            "Experiments (RCTs)", # method
-           "[Project 1](#project1) – Part 1") #deliverable
+           "[Project 1](#project1) – Part 1 (for Friday 09/08)") #deliverable
 s_causaleffects2<-c("4: 09/11", #date
            "6", # session
            "[Characteristics of High-Mobility Areas](#lec2_causaleffect) and [Correlation Analysis](#regression) ", #topic with link
