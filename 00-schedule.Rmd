@@ -81,7 +81,7 @@ s_review_mid<-c("6: 09/27", #date
            "Review for midterm ", #topic with link
            " ", #reading
            " ", # method
-           "[Project 2](#project2) (Friday 09/29) ") #deliverable
+           "[Project 2](#project2) (Monday 10/02) ") #deliverable
 s_mid<-c("7: 10/02", #date
            "12", # session
            "**Midterm**  ", #topic with link
