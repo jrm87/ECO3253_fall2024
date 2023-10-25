@@ -135,19 +135,19 @@ s_immigration<-c("11: 10/30", #date
            "Immigration ", #topic with link
            "Clemens (2011)  ", #reading
            "Welfare analysis ", # method
-           "[Project 3](#project3)") #deliverable
+           "") #deliverable
 s_ml<-c("11: 10/01", #date
            "21", # session
            "Implementing a simple machine learning model in R - Part 1", #topic with link
            "  ", #reading
            "  ", # method
-           " ") #deliverable
+           "") #deliverable
 s_ml2<-c("12: 11/06", #date
            "22", # session
            "Implementing a simple machine learning model in R - Part 2", #topic with link
            "  ", #reading
            "  ", # method
-           " ") #deliverable
+           "[Project 3](#project3)") #deliverable
 s_ml3<-c("12: 11/08", #date
            "23", # session
            "Implementing a simple machine learning model in R - Part 3", #topic with link
