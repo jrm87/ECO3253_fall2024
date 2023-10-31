@@ -177,7 +177,7 @@ s_pollution<-c("14: 11/22", #date
            "Intro to air and water pollution, and externalities ", #topic with link
            "Moore, Obradovich, Lehner and Baylis (2019)   ", #reading
            "Difference in difference ", # method
-           " ") #deliverable
+           "[Project 4](#project4) - (for Friday 11/24)") #deliverable
 s_saving<-c("15: 11/28", #date
            "26", # session
            "Savings and wealth ", #topic with link
@@ -213,7 +213,7 @@ s_review_final<-c("15: 11/30", #date
            "Review session ", #topic with link
            " ", #reading
            " ", # method
-           "[Project 4](#project4) - (for Friday 12/01)") #deliverable
+           "") #deliverable
 ```
 
 ```{r tableSchedule, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}

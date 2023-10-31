@@ -231,5 +231,3 @@ five-number-summary
 appPercentiles
 appDistributions
 outliers
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
-captioned-figures-and-tables
