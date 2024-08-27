@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Data Visualization | Economics of Public and Social Issues</title>
   <meta name="description" content="This is the website for the course ECO 3253 at UTSA, taught in the Fall of 2023." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Data Visualization | Economics of Public and Social Issues" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Jonathan Moreno-Medina" />
 
 
-<meta name="date" content="2023-10-31" />
+<meta name="date" content="2024-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,6 +121,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -585,9 +589,9 @@ div.csl-indent {
 <div id="gapminder" class="section level3 hasAnchor" number="12.1.2">
 <h3><span class="header-section-number">12.1.2</span> Gapminder data<a href="viz.html#gapminder" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In February 2006, a statistician named Hans Rosling gave a TED talk titled <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">“The best stats you’ve ever seen”</a> where he presented global economic, health, and development data from the website <a href="http://www.gapminder.org/tools/#_locale_id=en;&amp;chart-type=bubbles">gapminder.org</a>. For example, for the 142 countries included from 2007, let’s consider only the first 6 countries when listed alphabetically in Table <a href="viz.html#tab:gapminder-2007">12.1</a>.</p>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:gapminder-2007">Table 12.1: </span>Gapminder 2007 Data: First 6 of 142 countries
+<span id="tab:gapminder-2007">Table 12.1: </span><span id="tab:gapminder-2007">Table 12.2: </span>Gapminder 2007 Data: First 6 of 142 countries
 </caption>
 <thead>
 <tr>
@@ -739,10 +743,10 @@ Figure 12.1: Life Expectancy over GDP per Capita in 2007
 <li>The <code>data</code> variable <strong>Continent</strong> gets mapped to the <code>color</code> <code>aes</code>thetic of the points.</li>
 </ol>
 <p>We’ll see shortly that <code>data</code> corresponds to the particular data frame where our data is saved and a “data variable” corresponds to a particular column in the data frame. Furthermore, the type of <code>geom</code>etric object considered in this plot are points. That being said, while in this example we are considering points, graphics are not limited to just points. Other plots involve lines while others involve bars.</p>
-<p>Let’s summarize the three essential components of the Grammar in Table <a href="viz.html#tab:summary-table-gapminder">12.2</a>.</p>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<p>Let’s summarize the three essential components of the Grammar in Table <a href="viz.html#tab:summary-table-gapminder">12.3</a>.</p>
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:summary-table-gapminder">Table 12.2: </span>Summary of Grammar of Graphics for this plot
+<span id="tab:summary-table-gapminder">Table 12.3: </span><span id="tab:summary-table-gapminder">Table 12.4: </span>Summary of Grammar of Graphics for this plot
 </caption>
 <thead>
 <tr>
@@ -823,7 +827,7 @@ point
 </div>
 <div id="ggplot2-package" class="section level3 hasAnchor" number="12.1.4">
 <h3><span class="header-section-number">12.1.4</span> ggplot2 package<a href="viz.html#ggplot2-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In this book, we will be using the <code>ggplot2</code> package for data visualization, which is an implementation of the Grammar of Graphics for R <span class="citation">(<a href="#ref-R-ggplot2">Wickham et al. 2022</a>)</span>. As we noted earlier, a lot of the previous section was written in a computer code type font. This is because the various components of the Grammar of Graphics are specified in the <code>ggplot()</code> function included in the <code>ggplot2</code> package, which expects at a minimum as arguments (i.e. inputs):</p>
+<p>In this book, we will be using the <code>ggplot2</code> package for data visualization, which is an implementation of the Grammar of Graphics for R <span class="citation">(<a href="#ref-R-ggplot2">Wickham et al. 2023</a>)</span>. As we noted earlier, a lot of the previous section was written in a computer code type font. This is because the various components of the Grammar of Graphics are specified in the <code>ggplot()</code> function included in the <code>ggplot2</code> package, which expects at a minimum as arguments (i.e. inputs):</p>
 <ul>
 <li>The data frame where the variables exist: the <code>data</code> argument.</li>
 <li>The mapping of the variables to aesthetic attributes: the <code>mapping</code> argument which specifies the <code>aes</code>thetic attributes involved.</li>
@@ -1160,7 +1164,7 @@ Figure 12.14: Data Visualization with ggplot2 cheatsheat
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-R-ggplot2" class="csl-entry">
-Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2022. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2023. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 </div>
             </section>

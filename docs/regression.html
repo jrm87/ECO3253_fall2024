@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Simple and Multivariate Regression | Economics of Public and Social Issues</title>
   <meta name="description" content="This is the website for the course ECO 3253 at UTSA, taught in the Fall of 2023." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Simple and Multivariate Regression | Economics of Public and Social Issues" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Jonathan Moreno-Medina" />
 
 
-<meta name="date" content="2023-10-31" />
+<meta name="date" content="2024-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,6 +121,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -625,9 +629,9 @@ Let's briefly recap where we have been so far and where we are headed.  In Chapt
 <span id="cb53-2"><a href="regression.html#cb53-2" tabindex="-1"></a>  <span class="fu">select</span>(tract, county, state, kfr_pooled_p25, ann_avg_job_growth_2004_2013)</span></code></pre></div>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="regression.html#cb54-1" tabindex="-1"></a>atlas_mob_jobs <span class="sc">%&gt;%</span> </span>
 <span id="cb54-2"><a href="regression.html#cb54-2" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="dv">5</span>)</span></code></pre></div>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-106">Table 14.1: </span>Random sample of 5 neighborhoods
+<span id="tab:unnamed-chunk-106">Table 14.1: </span><span id="tab:unnamed-chunk-106">Table 14.2: </span>Random sample of 5 neighborhoods
 </caption>
 <thead>
 <tr>
@@ -744,12 +748,12 @@ ann_avg_job_growth_2004_2013
 <li><code>kfr_pooled_p25</code>: Numerical variable of the average income that children that grew up in that neighborhood from parents in the percentile 25th receive when adults.</li>
 <li><code>ann_avg_job_growth_2004_2013</code>: Numerical variable of average job growth between 2004 and 2013. Notice that the numbers on job growth need to be multiplied by 100 to get percentages. That is, 0 is 0\%, while 1 would be 100\%.</li>
 </ol>
-<p>An alternative way to look at the raw data values is by choosing a random sample of the rows in <code>atlas_mob_jobs</code> by piping it into the <code>sample_n()</code> function from the <code>dplyr</code> package. Here we set the <code>size</code> argument to be <code>5</code>, indicating that we want a random sample of 5 rows. We display the results in Table <a href="regression.html#tab:five-random-courses">14.2</a>. Note that due to the random nature of the sampling, you will likely end up with a different subset of 5 rows.</p>
+<p>An alternative way to look at the raw data values is by choosing a random sample of the rows in <code>atlas_mob_jobs</code> by piping it into the <code>sample_n()</code> function from the <code>dplyr</code> package. Here we set the <code>size</code> argument to be <code>5</code>, indicating that we want a random sample of 5 rows. We display the results in Table <a href="regression.html#tab:five-random-courses">14.3</a>. Note that due to the random nature of the sampling, you will likely end up with a different subset of 5 rows.</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="regression.html#cb55-1" tabindex="-1"></a>atlas_mob_jobs <span class="sc">%&gt;%</span></span>
 <span id="cb55-2"><a href="regression.html#cb55-2" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">5</span>)</span></code></pre></div>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:five-random-courses">Table 14.2: </span>A random sample of 5 neighborhoods
+<span id="tab:five-random-courses">Table 14.3: </span><span id="tab:five-random-courses">Table 14.4: </span>A random sample of 5 neighborhoods
 </caption>
 <thead>
 <tr>
@@ -1053,9 +1057,9 @@ Figure 14.4: Regression line without error bands
 ## F-statistic:  362 on 1 and 70230 DF,  p-value: &lt;0.0000000000000002</code></pre>
 <p>Note how we took the output of the model fit saved in <code>mob_model</code> and used it as an input to the subsequent <code>summary()</code> function. The raw output of the <code>summary()</code> function above gives lots of information about the regression model that we won’t cover in this introductory course (e.g., Multiple R-squared, F-statistic, etc.). We will only consider the “Coefficients” section of the output. We can print these relevant results only by accessing the <code>coefficients</code> object stored in the summary results.</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="regression.html#cb73-1" tabindex="-1"></a><span class="fu">summary</span>(mob_model)<span class="sc">$</span>coefficients</span></code></pre></div>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:numxplot4b">Table 14.3: </span>Linear regression table
+<span id="tab:numxplot4b">Table 14.5: </span><span id="tab:numxplot4b">Table 14.6: </span>Linear regression table
 </caption>
 <thead>
 <tr>
@@ -1071,7 +1075,7 @@ Std. Error
 t value
 </th>
 <th style="text-align:right;">
-Pr(&gt;|t|)
+Pr(&gt;&amp;#124;t&amp;#124;)
 </th>
 </tr>
 </thead>
@@ -1211,13 +1215,13 @@ Figure 14.7: Causal graph.
 <div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="regression.html#cb77-1" tabindex="-1"></a><span class="fu">cor</span>(atlas_mob_jobs_poor<span class="sc">$</span>kfr_pooled_p25, atlas_mob_jobs_poor<span class="sc">$</span>ann_avg_job_growth_2004_2013, <span class="at">use =</span> <span class="st">&quot;pairwise.complete.obs&quot;</span>)</span>
 <span id="cb77-2"><a href="regression.html#cb77-2" tabindex="-1"></a></span>
 <span id="cb77-3"><a href="regression.html#cb77-3" tabindex="-1"></a><span class="fu">cor</span>(atlas_mob_jobs_poor<span class="sc">$</span>kfr_pooled_p25, atlas_mob_jobs_poor<span class="sc">$</span>poor_share2010, <span class="at">use =</span> <span class="st">&quot;pairwise.complete.obs&quot;</span>)</span></code></pre></div>
-<p>Or we can simultaneously compute them by returning a <em>correlation matrix</em> which we display in Table <a href="regression.html#tab:model3-correlation">14.4</a>. We can read off the correlation coefficient for any pair of variables by looking them up in the appropriate row/column combination.</p>
+<p>Or we can simultaneously compute them by returning a <em>correlation matrix</em> which we display in Table <a href="regression.html#tab:model3-correlation">14.7</a>. We can read off the correlation coefficient for any pair of variables by looking them up in the appropriate row/column combination.</p>
 <div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="regression.html#cb78-1" tabindex="-1"></a>atlas_mob_jobs_poor <span class="sc">%&gt;%</span></span>
 <span id="cb78-2"><a href="regression.html#cb78-2" tabindex="-1"></a>  <span class="fu">select</span>(kfr_pooled_p25, ann_avg_job_growth_2004_2013, poor_share2010) <span class="sc">%&gt;%</span> </span>
 <span id="cb78-3"><a href="regression.html#cb78-3" tabindex="-1"></a>  <span class="fu">cor</span>()</span></code></pre></div>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:model3-correlation">Table 14.4: </span>Correlation coefficients between mobility, job growth and poverty rate.
+<span id="tab:model3-correlation">Table 14.7: </span><span id="tab:model3-correlation">Table 14.8: </span>Correlation coefficients between mobility, job growth and poverty rate.
 </caption>
 <thead>
 <tr>
@@ -1323,7 +1327,7 @@ Figure 14.9: 3D scatterplot and regression plane.
 <div id="model3table" class="section level3 hasAnchor" number="14.3.2">
 <h3><span class="header-section-number">14.3.2</span> Regression plane<a href="regression.html#model3table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s now fit a regression model and get the regression table corresponding to the regression plane in Figure <a href="regression.html#fig:3D-scatterplot">14.9</a>. We’ll consider a model fit with a formula of the form <code>y ~ x1 + x2</code>, where <code>x1</code> and <code>x2</code> represent our two explanatory variables <code>ann_avg_job_growth_2004_2013</code> and <code>poor_share2010</code>.</p>
-<p>Just like we did in Chapter <a href="regression.html#regression">14</a>, let’s get the regression table for this model using our two-step process and display the results in Table <a href="regression.html#tab:model3-table-output">14.5</a>.</p>
+<p>Just like we did in Chapter <a href="regression.html#regression">14</a>, let’s get the regression table for this model using our two-step process and display the results in Table <a href="regression.html#tab:model3-table-output">14.9</a>.</p>
 <ol style="list-style-type: decimal">
 <li>We first “fit” the linear regression model using the <code>lm(y ~ x1 + x2, data)</code> function and save it in <code>mob_model2</code>.</li>
 <li>We get the regression table by applying the <code>summary()</code> function to <code>mob_model2</code>.</li>
@@ -1332,9 +1336,9 @@ Figure 14.9: 3D scatterplot and regression plane.
 <span id="cb81-2"><a href="regression.html#cb81-2" tabindex="-1"></a>mob_model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(kfr_pooled_p25 <span class="sc">~</span> ann_avg_job_growth_2004_2013 <span class="sc">+</span> poor_share2010, <span class="at">data =</span> atlas_mob_jobs_poor)</span>
 <span id="cb81-3"><a href="regression.html#cb81-3" tabindex="-1"></a><span class="co"># Get regression table:</span></span>
 <span id="cb81-4"><a href="regression.html#cb81-4" tabindex="-1"></a><span class="fu">summary</span>(mob_model2)<span class="sc">$</span>coefficients</span></code></pre></div>
-<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table" style="font-size: 16px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:model3-table-output">Table 14.5: </span>Multiple regression table
+<span id="tab:model3-table-output">Table 14.9: </span><span id="tab:model3-table-output">Table 14.10: </span>Multiple regression table
 </caption>
 <thead>
 <tr>
@@ -1350,7 +1354,7 @@ Std. Error
 t value
 </th>
 <th style="text-align:right;">
-Pr(&gt;|t|)
+Pr(&gt;&amp;#124;t&amp;#124;)
 </th>
 </tr>
 </thead>
