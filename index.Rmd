@@ -1,6 +1,6 @@
 --- 
 title: "Economics of Public and Social Issues"
-subtitle: "ECO 3253, Fall 2023"
+subtitle: "ECO 3253, Fall 2024"
 author: "Jonathan Moreno-Medina"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,7 +9,7 @@ bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is the website for the course ECO 3253 at UTSA, taught in the Fall of 2023. 
+  This is the website for the course ECO 3253 at UTSA, taught in the Fall of 2024. 
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---

@@ -15,175 +15,185 @@ create_session<- function(vector){
 
   line<-paste0(c("|",week,"|",session,"|",topic,"|",reading,"|",method,"|",deliverable, "|", "\n"))
 }
-s_intro<-c("1: 08/21", "1", "Introduction to the course", " ", " ", " ")
-s_geomob<-c("1: 08/23", #date
+s_intro<-c("1: 08/27", "1", "Introduction to the course", " ", " ", " ")
+s_geomob<-c("1: 08/29", #date
            "2", # session
            "[Geography of Upward Mobility in America](#lec1_geomobility)", #topic with link
            "Chetty, Friedman, Hendren, Jones and Porter (2018)- **Non-technical summary** ", #reading
            " ", # method
            " ") #deliverable
-s_introR<-c("2: 08/28", #date
+
+s_introR<-c("2: 09/03", #date
            "3", # session
            "[Intro to R and data](#getting-started)", #topic with link
            " ", #reading
            " ", # method
            " ") #deliverable
-s_introR2<-c("2: 08/30", #date
+s_introR2<-c("2: 09/05", #date
            "4", # session
            "Intro to [Visualization](#viz), [Wrangling](#wrangling) and [RMarkdown](#rmarkdown)", #topic with link
            " ", #reading
            " ", # method
            "First short report (In class) - Project 0") #deliverable
-s_laborday<-c("3: 09/04", #date
-           "-", # session
-           "Labor Day – No class", #topic with link
-           " ", #reading
-           " ", # method
-           " ") #deliverable
-s_causaleffects<-c("3: 09/06", #date
+
+s_causaleffects<-c("3: 09/10", #date
            "5", # session
            "[Intro to Causal Effects of Neighborhoods](#lec2_causaleffect) ", #topic with link
            "Bergman, Chetty, DeLuca, Hendren, Katz and Palmer (2019) **[Non-technical summary]**", #reading
            "Experiments (RCTs)", # method
-           "[Project 1](#project1) – Part 1 (for Friday 09/08)") #deliverable
-s_causaleffects2<-c("4: 09/11", #date
+           "[Project 1](#project1) – Part 1 (for Tuesday 09/11)") #deliverable
+s_causaleffects2<-c("3: 09/12", #date
            "6", # session
            "[Characteristics of High-Mobility Areas](#lec2_causaleffect) and [Correlation Analysis](#regression) ", #topic with link
            "Bergman, Chetty, DeLuca, Hendren, Katz and Palmer (2019) - Introduction", #reading
            "Quasi-experiments ", # method
            " ") #deliverable
-s_mto<-c("4: 09/13", #date
+
+s_mto<-c("4: 09/17", #date
            "7", # session
            "[Moving to Opportunity and place based policies](#lec3_mto-placebased) ", #topic with link
            " ", #reading
            "Cost-benefit analysis ", # method
-           "[Project 1](#project1) – Part 1 and 2 (for Friday 09/15) ") #deliverable
-s_mob_hist_int<-c("5: 09/18", #date
+           "[Project 1](#project1) – Part 1 and 2 (for Tuesday 09/18) ") #deliverable
+s_mob_hist_int<-c("4: 09/19", #date
            "8", # session
            "[Historical and International Evidence on](#lec4_mob-hist-int) and [Drivers of Inequality and Mobility](#lec4_mob-hist-int) ", #topic with link
            " ", #reading
            " ", # method
            " ") #deliverable
-s_mob_ed<-c("5: 09/20", #date
+
+s_review_mid<-c("5: 09/24", #date
            "9", # session
-           "[Higher Education and Upward Mobility](#lec5_mob-ed) ", #topic with link
-           "Dynarski, Libassi, Michelmore and Owen (2018) ", #reading
-           "Regression discontinuity ", # method
-           " ") #deliverable
-s_ed_higher<-c("6: 09/25", #date
-           "10", # session
-           "[Causal Effects of Higher Education](#lec6_ed-higher) ", #topic with link
-           " ", #reading
-           " ", # method
-           " ") #deliverable
-s_review_mid<-c("6: 09/27", #date
-           "11", # session
            "Review for midterm ", #topic with link
            " ", #reading
            " ", # method
-           "[Project 2](#project2) (Monday 10/02) ") #deliverable
-s_mid<-c("7: 10/02", #date
-           "12", # session
+           "") #deliverable
+s_mid<-c("5: 09/26", #date
+           "10", # session
            "**Midterm**  ", #topic with link
            " ", #reading
            " ", # method
            " ") #deliverable
-s_solution_mid<-c("7: 10/04", #date
-           "13", # session
-           "_Solution review_  ", #topic with link
+
+s_inClassR<-c("6: 10/01", #date
+           "11", # session
+           "Work in Class For Project 2 ", #topic with link
            " ", #reading
            " ", # method
+           "") #deliverable
+
+s_noclass1<-c("6: 10/03", #date
+           "-", # session
+           "No Class ", #topic with link
+           " ", #reading
+           " ", # method
+           "") #deliverable
+
+s_mob_ed<-c("7: 10/08", #date
+           "12", # session
+           "[Higher Education and Upward Mobility](#lec5_mob-ed) ", #topic with link
+           "Dynarski, Libassi, Michelmore and Owen (2018) ", #reading
+           "Regression discontinuity ", # method
            " ") #deliverable
-s_recap_quarto<-c("8: 10/09", #date
-           "14", # session
+
+s_recap_quarto<-c("7: 10/10", #date
+           "13", # session
            "Recap of R and Quarto Documents ", #topic with link
            " ", #reading
            " ", # method
+           "[Project 2](#project2) (Monday 10/02)  ") #deliverable
+
+s_ed_higher<-c("8: 10/15", #date
+           "14", # session
+           "[Causal Effects of Higher Education](#lec6_ed-higher) ", #topic with link
+           " ", #reading
+           " ", # method
            " ") #deliverable
-s_k12<-c("8: 10/11", #date
+
+s_k12<-c("8: 10/17", #date
            "15", # session
            "[Primary education](#lec7_k12)", #topic with link
            "Chetty, Friedman and Rockoff (2011) [Non-technical summary]	", #reading
            "Experiments ", # method
            " ") #deliverable
-s_teachers<-c("9: 10/16", #date
+s_teachers<-c("9: 10/22", #date
            "16", # session
            "[Teachers and Charter Schools](#lec8_teachers-charters)", #topic with link
            "	", #reading
            "Event study designs, competitive equilibrium ", # method
            " ") #deliverable
-s_racedis<-c("9: 10/18", #date
+s_racedis<-c("9: 10/24", #date
            "17", # session
            "[Racial Disparities in Economic Opportunity](#lec9_race-ineq) ", #topic with link
            "Bertrand, and Mullainathan (2004)	", #reading
            "Dynamic models and steady states ", # method
            " ") #deliverable
-s_mediabias<-c("10: 10/23", #date
-           "18", # session
-           "Media Bias in Crime Coverage and Housing Prices ", #topic with link
-           "  ", #reading
-           "Instrumental Variables", # method
-           " ") #deliverable
-s_jud_sys<-c("10: 10/25", #date
+# s_mediabias<-c("10: 10/29", #date
+#            "18", # session
+#            "Media Bias in Crime Coverage and Housing Prices ", #topic with link
+#            "  ", #reading
+#            "Instrumental Variables", # method
+#            " ") #deliverable
+s_jud_sys<-c("10: 10/29", #date
            "19", # session
            "[Improving judicial decisions](#lec10_criminal-justice)", #topic with link
            "Kleinberg, Lakkaraju, Leskovec, Ludwig and Mullainathan (2017) ", #reading
            "Machine learning, implicit bias ", # method
            "") #deliverable
-s_immigration<-c("11: 10/30", #date
+s_immigration<-c("10: 10/31", #date
            "20", # session
            "Immigration ", #topic with link
            "Clemens (2011)  ", #reading
            "Welfare analysis ", # method
            "") #deliverable
-s_ml<-c("11: 10/01", #date
+s_ml<-c("11: 11/05", #date
            "21", # session
            "Implementing a simple machine learning model in R - Part 1", #topic with link
            "  ", #reading
            "  ", # method
            "") #deliverable
-s_ml2<-c("12: 11/06", #date
+s_ml2<-c("11: 11/07", #date
            "22", # session
            "Implementing a simple machine learning model in R - Part 2", #topic with link
            "  ", #reading
            "  ", # method
            "[Project 3](#project3)") #deliverable
-s_ml3<-c("12: 11/08", #date
+s_ml3<-c("12: 11/12", #date
            "23", # session
            "Implementing a simple machine learning model in R - Part 3", #topic with link
            "  ", #reading
            "  ", # method
            " ") #deliverable
-s_polecon<-c("13: 11/13", #date
+s_polecon<-c("12: 11/14", #date
            "24", # session
            "Political Economy ", #topic with link
            "  ", #reading
            " ", # method
            "") #deliverable
-s_noclass<-c("13: 11/15", #date
+s_noclass<-c("13: 11/19", #date
            "-", # session
-           "-", #topic with link
+           "No Class", #topic with link
            "", #reading
            "", # method
            " ") #deliverable
-s_tax<-c("14: 11/20", #date
+s_tax<-c("13: 11/21", #date
            "25", # session
            "Income taxation ", #topic with link
            "Diamond and Saez (2011)  ", #reading
            "Supply and demand; synthetic control ", # method
            " ") #deliverable
-s_pollution<-c("14: 11/22", #date
+s_pollution<-c("14: 11/26", #date
            "26", # session
            "Intro to air and water pollution, and externalities ", #topic with link
            "Moore, Obradovich, Lehner and Baylis (2019)   ", #reading
            "Difference in difference ", # method
            "[Project 4](#project4) - (for Friday 11/24)") #deliverable
-s_saving<-c("15: 11/28", #date
-           "26", # session
-           "Savings and wealth ", #topic with link
-           "  ", #reading
-           "Behavioral Economics ", # method
-           " ") #deliverable
+# s_saving<-c("15: 12/03", #date
+#            "26", # session
+#            "Savings and wealth ", #topic with link
+#            "  ", #reading
+#            "Behavioral Economics ", # method
+#            " ") #deliverable
 # s_housing<-c("13: 11/16", #date
 #            "25", # session
 #            "Housing markets and COVID ", #topic with link
@@ -208,9 +218,15 @@ s_saving<-c("15: 11/28", #date
 #            " ", #reading
 #            " ", # method
 #            " ") #deliverable
-s_review_final<-c("15: 11/30", #date
+s_review_final<-c("15: 12/03", #date
            "27", # session
            "Review session ", #topic with link
+           " ", #reading
+           " ", # method
+           "") #deliverable
+s_final<-c("16: 12/12", #date
+           "27", # session
+           "**Final Exam** ", #topic with link
            " ", #reading
            " ", # method
            "") #deliverable
@@ -259,21 +275,20 @@ tabl<-paste0(c(title_line,
                create_session(s_geomob), 
               create_session(s_introR), 
               create_session(s_introR2), 
-              create_session(s_laborday), 
               create_session(s_causaleffects), 
               create_session(s_causaleffects2), 
               create_session(s_mto), 
               create_session(s_mob_hist_int), 
-              create_session(s_mob_ed), 
-              create_session(s_ed_higher), 
               create_session(s_review_mid), 
               create_session(s_mid), 
-              create_session(s_solution_mid), 
+              create_session(s_inClassR),
+              create_session(s_noclass1),
+              create_session(s_mob_ed), 
               create_session(s_recap_quarto), 
+              create_session(s_ed_higher), 
               create_session(s_k12), 
               create_session(s_teachers), 
               create_session(s_racedis), 
-              create_session(s_mediabias),
               create_session(s_jud_sys), 
               create_session(s_immigration), 
               create_session(s_ml), 
@@ -282,12 +297,14 @@ tabl<-paste0(c(title_line,
               create_session(s_polecon),
               create_session(s_noclass),
               create_session(s_tax), 
-              create_session(s_saving), 
+              create_session(s_pollution),
+              #create_session(s_saving), 
               #create_session(s_housing),
               #create_session(s_pollution),
               #create_session(s_discountrate),
               #create_session(s_tbd1),
-              create_session(s_review_final)))
+              create_session(s_review_final),
+              create_session(s_final)))
 cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
 ```
 
