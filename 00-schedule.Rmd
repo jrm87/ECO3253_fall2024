@@ -101,7 +101,7 @@ s_recap_quarto<-c("7: 10/10", #date
            "Recap of R and Quarto Documents ", #topic with link
            " ", #reading
            " ", # method
-           "[Project 2](#project2) (Monday 10/02)  ") #deliverable
+           "[Project 2](#project2) (Tuesday 10/11)  ") #deliverable
 
 s_ed_higher<-c("8: 10/15", #date
            "14", # session
@@ -157,7 +157,7 @@ s_ml2<-c("11: 11/07", #date
            "Implementing a simple machine learning model in R - Part 2", #topic with link
            "  ", #reading
            "  ", # method
-           "[Project 3](#project3)") #deliverable
+           "[Project 3](#project3) (for Friday 11/08)") #deliverable
 s_ml3<-c("12: 11/12", #date
            "23", # session
            "Implementing a simple machine learning model in R - Part 3", #topic with link
@@ -187,7 +187,7 @@ s_pollution<-c("14: 11/26", #date
            "Intro to air and water pollution, and externalities ", #topic with link
            "Moore, Obradovich, Lehner and Baylis (2019)   ", #reading
            "Difference in difference ", # method
-           "[Project 4](#project4) - (for Friday 11/24)") #deliverable
+           "[Project 4](#project4) - (for Friday 11/27)") #deliverable
 # s_saving<-c("15: 12/03", #date
 #            "26", # session
 #            "Savings and wealth ", #topic with link

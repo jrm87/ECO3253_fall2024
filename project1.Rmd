@@ -4,13 +4,13 @@
 
 ## Stories from the Atlas: Describing Data using Maps, Regressions, and Correlations {-}
 
-- **Posted**: Monday, August 21, 2023
+- **Posted**: Wednesday, August 28, 2024
 
-- **Part 1**: Due at midnight on Wednesday, September 6, 2023
+- **Part 1**: Due at midnight on Tuesday , September 11, 2024
 
-- **Part 2**: Due at midnight on Friday, September 15, 2023
+- **Part 2**: Due at midnight on Tuesday , September 17, 2024
 
-The [Opportunity Atlas](https://www.opportunityatlas.org/) is a freely available interactive mapping tool that traces the roots of outcomes such as poverty and incarceration back to the neighborhoods in which children grew up.  
+The [Opportunity Atlas](https://www.opportunityatlas.org/) is a freely available interactive mapping tool that traces the roots of outcomes such as poverty and incarceration back to the neighborhoods in which children grew up. Once you are on the main landing page, select **Module 1 (Neighborhoods - MOBILITY OUTCOMES)**.  
 
 Policymakers, journalists, and the public have begun to explore the Opportunity Atlas, casting  new light on the geography of upward mobility in communities across the country.  As an example, see Jasmine Garsd’s [analysis](https://www.npr.org/2018/10/04/654085265/the-american-dream-one-block-can-make-all-the-difference) for the New York City neighborhood of Brownsville in Brooklyn.
 

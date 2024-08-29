@@ -23,7 +23,7 @@
 <meta name="author" content="Jonathan Moreno-Medina" />
 
 
-<meta name="date" content="2024-08-28" />
+<meta name="date" content="2024-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -124,28 +124,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <style type="text/css">
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -557,8 +535,8 @@ div.csl-indent {
 <div id="using-google-datacommons-to-predict-social-mobility" class="section level2 unnumbered hasAnchor">
 <h2>Using Google DataCommons to Predict Social Mobility<a href="project4.html#using-google-datacommons-to-predict-social-mobility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p><strong>Posted</strong>: Monday, October 30, 2023</p></li>
-<li><p><strong>Due</strong>: Midnight on Friday, November 24, 2023</p></li>
+<li><p><strong>Posted</strong>: Wednesday, August 28, 2024</p></li>
+<li><p><strong>Due</strong>: Midnight on Friday, November 27, 2024</p></li>
 </ul>
 <p>You have already explored the <a href="https://www.opportunityatlas.org/">Opportunity Atlas</a> in <a href="project1.html#project1">Project 1</a> and the <a href="https://socialcapital.org/">Social Capital Atlas</a>. In this this empirical project, you will use the Opportunity Atlas mapping tool and the underlying data, plus data from <a href="https://www.datacommons.org/">Google DataCommons</a>, to predict intergenerational mobility using <strong>machine learning</strong> methods. The measure of intergenerational mobility that we will focus on, as usual, is the mean rank of a child whose parents were at the 25th percentile of the national income distribution in each county (<code>kfr_pooled_p25</code>). Your goal is to construct the best predictions of this outcome using other variables, an important step in creating forecasts of upward mobility that could be used for future generations, before data on their outcomes become available.</p>
 <p>I am passing along a “training” dataset, made of a random sample of 70% of all neighborhoods in the original Opportunity Atlas (<code>train.rds</code>). You will use predictors, presented in <strong>Table 1</strong>, to predict the variable <code>kfr_pooled_p25</code>. There are 121 predictors in these data. Obviously, you do not need to use all the 121 variables for your prediction. You then need to test your model on the 50% that I have passed along in a different file for testing (<code>test.rds</code>).</p>
@@ -1190,11 +1168,6 @@ div.csl-indent {
 <span id="cb150-2"><a href="project4.html#cb150-2" tabindex="-1"></a><span class="co">#RMSE out of sample = 5965.278</span></span>
 <span id="cb150-3"><a href="project4.html#cb150-3" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">mean</span>((test<span class="sc">$</span>kfr_pooled_p25<span class="sc">-</span>pred_tree_outofsample)<span class="sc">^</span><span class="dv">2</span>, <span class="at">na.rm=</span><span class="cn">TRUE</span> ))</span></code></pre></div>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2023. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
-</div>
-</div>
 </div>
 </div>
 </div>
